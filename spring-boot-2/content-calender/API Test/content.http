@@ -1,0 +1,43 @@
+##DELETE http://localhost:8080/api/content/delete/99
+
+
+PUT http://localhost:8080/api/content/update/1
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "My First Blog Post",
+  "desc": "My first blog post",
+  "status": "IN_PROGRESS",
+  "contentType": "COURSE",
+  "dateCreated": "2023-04-02T18:04:28.2560918",
+  "dateUpdated": null,
+  "url": ""
+}
+
+###
+
+
+## POST
+POST http://localhost:8080/api/content/add
+Content-Type: application/json
+
+{
+  "id":1,
+  "title": "My First Blog Post",
+  "desc": "My first blog post",
+  "status": "IDEA",
+  "contentType": "VIDEO",
+  "dateCreated": "2023-04-02T18:04:28.2560918",
+  "dateUpdated": null,
+  "url": ""
+}
+
+###
+GET http://localhost:8080/api/content
+Accept: application/json
+
+###
+GET http://localhost:8080/api/content/1
+
+
