@@ -42,15 +42,15 @@ Run the project using the main class or command mvn spring-boot:run.
 
 The following are the API endpoints provided by this project:
 
-- GET /students: Get a list of all students.
+- GET api/getAll: Get a list of all students.
 
-- GET /students/{id}: Get a student by ID.
+- GET api/getById/{id}: Get a student by ID.
 
-- POST /students: Create a new student.
+- POST api/addStudent: Create a new student.
 
-- PUT /students/{id}: Update an existing student.
+- PUT api/updateStudent/{id}: Update an existing student.
 
-- DELETE /students/{id}: Delete a student by ID.
+- DELETE api/deleteStudent/{id}: Delete a student by ID.
 
 ## Testing
 
