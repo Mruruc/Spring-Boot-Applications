@@ -2,27 +2,27 @@
 
 This is a student service backend project developed using Spring Boot, Lombok, Spring MVC, and MongoDB data. The purpose of this project is to provide RESTful API endpoints for managing student data. The project is built using Maven and utilizes a MongoDB database for data storage. For API testing, Postman is used, and for collaboration, Git is utilized. The data format used is JSON.
 
-### Technologies Used
+## Technologies Used
 
-Spring Boot
+- Spring Boot
 
-Lombok
+- Lombok
 
-Spring MVC
+- Spring MVC
 
-MongoDB data
+- MongoDB data
 
-Maven
+- Maven
 
-MongoDB database
+- MongoDB database
 
-Postman
+- Postman
 
-Git
+- Git
 
-JSON
+- JSON
 
-Getting Started
+### Getting Started
 
 To run this project on your local machine, please follow these steps:
 
@@ -38,21 +38,21 @@ Build the project using Maven.
 
 Run the project using the main class or command mvn spring-boot:run.
 
-API Endpoints
+### API Endpoints
 
 The following are the API endpoints provided by this project:
 
-GET /students: Get a list of all students.
+- GET /students: Get a list of all students.
 
-GET /students/{id}: Get a student by ID.
+- GET /students/{id}: Get a student by ID.
 
-POST /students: Create a new student.
+- POST /students: Create a new student.
 
-PUT /students/{id}: Update an existing student.
+- PUT /students/{id}: Update an existing student.
 
-DELETE /students/{id}: Delete a student by ID.
+- DELETE /students/{id}: Delete a student by ID.
 
-Testing
+## Testing
 
 You can test the API endpoints using Postman. Import the Student-Service.postman_collection.json file included in the project and execute the requests.
 
