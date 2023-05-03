@@ -1,0 +1,7 @@
+com\studentService\service\StudentService.class
+com\studentService\App\DemoApplication.class
+com\studentService\model\Gender.class
+com\studentService\repository\StudentRepository.class
+com\studentService\model\Student.class
+com\studentService\model\Address.class
+com\studentService\controller\StudentController.class
