@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="rectangle1"  class="com.mruruc.bean_definition_inheritance.Rectangle"  >
+        <property name="A" ref="a"/>
+        <property name="B" ref="b"/>
+        <property name="C" ref="c"/>
+        <property name="D" ref="d"/>
+    </bean>
+
+    <bean id="rectangle2" class="com.mruruc.bean_definition_inheritance.Rectangle" parent="rectangle1"/>
+    <bean id="rectangle3" class="com.mruruc.bean_definition_inheritance.Rectangle" parent="rectangle2"/>
+
+    <bean id="a" class="com.mruruc.Injecting_Objects.Point" >
+        <constructor-arg index="0" type="int" value="2"/>
+        <constructor-arg index="1" type="int" value="3"/>
+    </bean>
+
+    <bean id="b" class="com.mruruc.Injecting_Objects.Point" >
+        <constructor-arg index="0" type="int" value="4"/>
+        <constructor-arg index="1" type="int" value="6"/>
+    </bean>
+
+    <bean id="c" class="com.mruruc.Injecting_Objects.Point" >
+        <constructor-arg index="0" type="int" value="0"/>
+        <constructor-arg index="1" type="int" value="0"/>
+    </bean>
+
+    <bean id="d" class="com.mruruc.Injecting_Objects.Point" >
+        <constructor-arg index="0" type="int" value="5"/>
+        <constructor-arg index="1" type="int" value="10"/>
+    </bean>
+
+
+
+
+</beans>

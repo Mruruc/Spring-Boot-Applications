@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+   <bean id="book1" class="com.mruruc.Initializing_collections.Book">
+      <constructor-arg index="0" type="int" name="bookId" value="1"/>
+      <constructor-arg index="1" type="java.lang.String" name="bookName" value="Wafllo-Biographic"/>
+   </bean>
+    <bean id="book2" class="com.mruruc.Initializing_collections.Book">
+        <constructor-arg index="0" type="int" value="2"/>
+        <constructor-arg index="1" type="java.lang.String" value="Shipoo Life"/>
+    </bean>
+
+    <bean id="Biographic-Shelf" class="com.mruruc.Initializing_collections.Shelf">
+        <property name="bookList"  >
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+            </list>
+        </property>
+    </bean>
+
+
+
+</beans>

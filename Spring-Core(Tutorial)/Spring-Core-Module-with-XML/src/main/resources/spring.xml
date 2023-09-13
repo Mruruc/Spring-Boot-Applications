@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="triangle" class="com.mruruc.setter_injection.Triangle" >
+         <property name="type" value="Equilateral"/>
+    </bean>
+
+    <bean id ="triangle2" class="com.mruruc.setter_injection.Triangle">
+        <!--setter injection-->
+        <property name="type" value="Isosceles"/>
+    </bean>
+
+
+</beans>

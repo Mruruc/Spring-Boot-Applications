@@ -1,0 +1,25 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="com.mruruc.Jpa-Customizing" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <!-- Database connection settings -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/test2"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="word"/>
+
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+
+            <!---SQL dialect-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+            <!-- Update the database schema on startup -->
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+ <!---   <property name="hibernate.hbm2ddl.auto" value="create-drop"/> -->
+        </properties>
+
+    </persistence-unit>
+</persistence>

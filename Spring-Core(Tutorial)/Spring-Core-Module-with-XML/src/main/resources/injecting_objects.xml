@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="a" class="com.mruruc.Injecting_Objects.Point" scope="singleton">
+        <constructor-arg index="0" type="int" name="x" value="2"/>
+        <constructor-arg index="1" type="int" name="y" value="3"/>
+    </bean>
+
+    <bean id="b" class="com.mruruc.Injecting_Objects.Point" scope="prototype">
+        <constructor-arg index="0" type="int" value="4"/>
+        <constructor-arg index="1" type="int" value="6"/>
+    </bean>
+
+    <bean id="c" class="com.mruruc.Injecting_Objects.Point" >
+        <constructor-arg index="0" type="int" value="0"/>
+        <constructor-arg index="1" type="int" value="0"/>
+    </bean>
+
+    <bean id="d" class="com.mruruc.Injecting_Objects.Point" >
+        <constructor-arg index="0" type="int" value="5"/>
+        <constructor-arg index="1" type="int" value="10"/>
+    </bean>
+
+    <!---we can use this feature instead of ref each property-> autowire="byName"-->
+    <bean id="rectangle"  class="com.mruruc.Injecting_Objects.Rectangle"  >
+        <property name="A" ref="a"/>
+        <property name="B" ref="b"/>
+        <property name="C" ref="c"/>
+        <property name="D" ref="d"/>
+    </bean>
+    <bean id="pointDefault" class="com.mruruc.Injecting_Objects.Point">
+        <constructor-arg index="0" type="int" value="10"/>
+        <constructor-arg index="1" type="int" value="10"/>
+    </bean>
+    <bean id="rectangle2" class="com.mruruc.Injecting_Objects.Rectangle">
+        <constructor-arg index="0" type="com.mruruc.Injecting_Objects.Point" name="a" ref="pointDefault" />
+        <constructor-arg index="1" type="com.mruruc.Injecting_Objects.Point" name="b" ref="b" />
+        <constructor-arg index="2"  name="c" ref="c" />
+        <constructor-arg index="3" name="d" ref="d"/>
+    </bean>
+
+
+</beans>

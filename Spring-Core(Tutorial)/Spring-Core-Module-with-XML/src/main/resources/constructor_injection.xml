@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id ="circle1"  class="com.mruruc.construction_injection.Circle">
+        <constructor-arg type="java.lang.Double" value="3" />
+    </bean>
+
+    <bean id ="circle2" class="com.mruruc.construction_injection.Circle">
+        <!--index specify order of argument in constructor. 0 = first argument,1=second argument  etc.-->
+        <constructor-arg index="0" type="java.lang.Double" name="r" value="2.35" />
+        <constructor-arg index="1" type="java.lang.Double"  name="customPI" value="3.0"/>
+    </bean>
+
+
+</beans>
