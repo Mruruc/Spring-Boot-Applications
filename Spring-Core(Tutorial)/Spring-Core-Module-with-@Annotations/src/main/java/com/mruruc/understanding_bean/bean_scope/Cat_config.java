@@ -4,11 +4,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-@Configuration
+@Configuration(
+        value = "config-bean"
+)
 public class Cat_config {
 
     /**
-     *Singleton (default): This is the default scope. For a single Spring IoC container,only one instance of the bean is created.
+     *  Singleton (default): This is the default scope. For a single Spring IoC container,only one instance of the bean is created.
      *  Singleton scope is appropriate for stateless beans where the same instance can be used by different clients.
      */
 

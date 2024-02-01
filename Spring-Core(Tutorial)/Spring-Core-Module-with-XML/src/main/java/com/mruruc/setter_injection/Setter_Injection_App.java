@@ -12,7 +12,7 @@ public class Setter_Injection_App {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context=
+		var context=
 				new ClassPathXmlApplicationContext("spring.xml");
 
 		Triangle triangle =(Triangle) context.getBean("triangle");
@@ -27,6 +27,7 @@ public class Setter_Injection_App {
 		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
 
+		context.close();
 	}
 
 }

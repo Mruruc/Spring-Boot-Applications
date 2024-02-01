@@ -17,5 +17,7 @@ public class Main {
         System.out.println("cat2.1: "+context.getBean("cat2").hashCode());
         System.out.println("cat2.2: "+context.getBean("cat2").hashCode());
         System.out.println("cat2.3: "+context.getBean("cat2").hashCode());
+
+        context.close();
     }
 }

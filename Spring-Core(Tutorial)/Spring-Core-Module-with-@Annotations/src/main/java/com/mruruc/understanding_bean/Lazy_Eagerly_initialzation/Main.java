@@ -12,17 +12,18 @@ public class Main {
         System.out.println("==============Before calling Lazy initialize Bean========= ");
         Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
-       Student student1 = (Student) context.getBean("student1");
-        System.out.println(
-                student1
-        );
+          Student student1 = (Student) context.getBean("student1");
+        System.out.println(student1);
 
         System.out.println("==============After calling Lazy initialize Bean========= ");
 
         Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
-        Student student2= (Student) context.getBean("student2");
-        System.out.println(student2);
+        // Student student2= (Student) context.getBean("student2");
+       // System.out.println(student2);
+
+
+        context.close();
 
     }
 }

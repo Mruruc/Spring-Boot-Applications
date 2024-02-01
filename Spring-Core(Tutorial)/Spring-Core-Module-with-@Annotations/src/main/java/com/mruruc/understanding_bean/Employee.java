@@ -23,15 +23,15 @@ public class Employee {
     }
 
 
+    public void init() {
+        System.out.println(this.name);
+        System.out.println("Manager Bean is Created");
+    }
 
-//    public void init(){
-//        System.out.println("Manager Bean is Created");
-//    }
 
-
-//    public void destroy(){
-//        System.out.println("Manager Bean is Destroyed!");
-//    }
+    public void destroy() {
+        System.out.println("Manager Bean is Destroyed!");
+    }
 
 
 }

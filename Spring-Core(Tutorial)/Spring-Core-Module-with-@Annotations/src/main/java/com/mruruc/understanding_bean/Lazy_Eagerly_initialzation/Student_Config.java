@@ -1,7 +1,9 @@
 package com.mruruc.understanding_bean.Lazy_Eagerly_initialzation;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
+@Configuration
 public class Student_Config {
 
     /**
@@ -28,9 +30,10 @@ public class Student_Config {
      */
 
     @Bean(value = "student2")
-    @Lazy(value = true)
+    @Lazy
     public Student student2(){
         return new Student("Neloo");
     }
+
 
 }
