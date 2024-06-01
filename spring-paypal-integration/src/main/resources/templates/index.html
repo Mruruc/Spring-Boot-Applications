@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spring Boot Thymeleaf Example</title>
+  </head>
+  <body style="text-align: center">
+    <header>
+      <h1>Spring Paypal Integration</h1>
+    </header>
+    <main>
+      <form action="./payment/create" method="post">
+        <input type="text" name="method" value="Paypal" readonly /> <br />
+        <input type="number" name="amount" value="100" /> <br />
+        <select name="currency">
+          <option value="USD" selected>USD</option>
+          <option value="EUR">EUR</option>
+          <option value="PLN">PLN</option>
+        </select>
+        <br />
+        <textarea name="description" placeholder="Description"></textarea>
+        <br />
+        <button type="submit">Pay with Paypal</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.2</version>
+		<version>3.2.5</version>
 		<relativePath/>
 	</parent>
 
@@ -17,10 +17,7 @@
 	<description>understanding-Spring-Core-Module-with-Annotations</description>
 
 	<properties>
-	<!--<java.version>21</java.version> -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.target>21</maven.compiler.target>
-		<maven.compiler.source>21</maven.compiler.source>
+	    <java.version>21</java.version>
 	</properties>
 
 	<url>https://github.com/Mruruc</url>

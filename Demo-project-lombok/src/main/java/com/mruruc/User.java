@@ -11,7 +11,6 @@ import java.util.Date;
 @EqualsAndHashCode(exclude = {"password","phone_number"})
 public class User {
   
-
     @NonNull
     private String first_name;
     private String last_name;
